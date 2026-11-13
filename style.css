@@ -1,0 +1,38 @@
+*{box-sizing:border-box}
+:root{--ink:#30234a;--purple:#7552d8;--pink:#ff729d;--orange:#ffae57;--yellow:#ffe17b;--mint:#8fe1ca}
+body{margin:0;min-height:100vh;padding:22px 16px 30px;background:#fff2f8;color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif;display:grid;place-items:center}
+.game-shell{width:min(680px,100%);margin:auto}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:1000;letter-spacing:.08em;font-size:1rem;color:var(--ink);text-decoration:none}
+.brand>span:first-child{color:var(--orange);font-size:1.3rem}.brand-pop{color:var(--pink)}
+.safe-tag{font-size:.6rem;font-weight:900;letter-spacing:.1em;color:#9b7190;background:#ffe1ed;padding:8px 11px;border-radius:30px}
+.hero{text-align:center;padding:27px 0 20px}
+.eyebrow{font-size:.65rem;letter-spacing:.18em;font-weight:1000;color:var(--purple);margin:0 0 9px}
+h1{font-size:clamp(2.5rem,8vw,4rem);line-height:.94;letter-spacing:-.08em;margin:0}
+h1 span{color:var(--pink)}
+.hero>p:last-child{color:#887d99;font-size:.9rem;margin:12px 0 0}
+.machine{position:relative;padding:21px clamp(15px,4vw,30px) 23px;border-radius:28px;background:linear-gradient(145deg,#8e6be8,#6c4bc5);border:5px solid #fff;outline:2px solid #d7c4fa;box-shadow:0 18px 40px #7d55b52a;color:#fff;overflow:hidden}
+.machine:before,.machine:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:#ffffff0c;pointer-events:none}
+.machine:before{top:-55px;left:-45px}.machine:after{bottom:-65px;right:-35px}
+.machine-top{display:flex;justify-content:space-between;gap:8px;padding-bottom:14px;border-bottom:1px solid #ffffff38;color:#f9e9ff;font-size:.62rem;font-weight:1000;letter-spacing:.13em}
+.wallet-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0}
+.wallet,.cost{padding:12px 15px;border-radius:14px;background:#4f369f55;border:1px solid #ffffff2a}
+.wallet span,.cost span{display:block;font-size:.6rem;font-weight:900;letter-spacing:.13em;color:#e6dfff}
+.wallet strong,.cost strong{display:block;font-size:1.8rem;letter-spacing:-.04em;margin-top:3px}
+.cost strong{font-size:1.35rem;color:var(--yellow)}.cost small{font-size:.6rem}
+.reel-frame{background:#4e369d;border:2px solid #d7c6ff;border-radius:19px;padding:12px;box-shadow:inset 0 5px 14px #2e1c6c70}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.reel{aspect-ratio:1/1;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#fff0dc);border-radius:13px;color:#30234a;font-size:clamp(3rem,12vw,5.4rem);box-shadow:0 5px 0 #d7c6ed,inset 0 -4px 9px #4d2a1710}
+.reel.rolling{filter:blur(2px);transform:scale(.96)}
+.message-wrap{display:flex;justify-content:center;align-items:center;gap:10px;min-height:48px;margin:12px 0 5px;text-align:center}
+.message-wrap p{font-weight:900;font-size:.86rem;margin:0;color:#fff8dc}
+.message-star{color:var(--yellow)}
+#spinBtn{display:flex;align-items:center;justify-content:center;gap:20px;width:min(270px,100%);margin:0 auto;border:0;border-radius:50px;padding:14px 22px;background:linear-gradient(180deg,#ffe98e,#ffc44d);color:#654017;font-size:1rem;font-weight:1000;letter-spacing:.2em;cursor:pointer;box-shadow:0 6px 0 #c47c2d,0 10px 20px #301b7040;transition:transform .13s,filter .13s}
+#spinBtn b{font-size:1.2rem;color:#a95b27}
+#spinBtn:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.04)}
+#spinBtn:active:not(:disabled){transform:translateY(3px);box-shadow:0 3px 0 #c47c2d}
+#spinBtn:disabled{opacity:.6;cursor:not-allowed;filter:grayscale(.25)}
+.rules{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:19px;color:#eee6ff}
+.rules>span{font-size:1.7rem}.rules p{font-size:.7rem;line-height:1.45;margin:0}.rules strong{color:var(--yellow);letter-spacing:.12em;font-size:.62rem}
+footer{display:flex;justify-content:space-between;gap:10px;color:#a58caa;font-size:.62rem;font-weight:900;letter-spacing:.08em;padding:20px 3px 0}
+@media(max-width:430px){body{padding:16px 10px}.safe-tag{font-size:.5rem}.machine-top{font-size:.53rem}.reels{gap:7px}.reel{border-radius:10px}.wallet strong{font-size:1.5rem}.rules{align-items:flex-start}}
